@@ -29,8 +29,14 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '24'
         cache: 'npm'
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v6
+      with:
+        static_site_generator: next
 
     - name: Install dependencies
       run: npm ci
@@ -38,20 +44,16 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        NODE_ENV: production
+        NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
     - name: Add .nojekyll file
       run: |
-        mkdir -p ./dist
-        touch ./dist/.nojekyll
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
+        touch ./out/.nojekyll
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./dist
+        path: ./out
 
     - name: Deploy to GitHub Pages
       id: deployment
