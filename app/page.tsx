@@ -1,55 +1,161 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { estates } from "./estates/data";
 
+const bannerSlides = [
+  {
+    name: estates[0].name,
+    badge: estates[0].badge,
+    src: estates[0].heroImage,
+    alt: estates[0].heroAlt,
+  },
+  {
+    name: estates[1].name,
+    badge: estates[1].badge,
+    src: estates[1].heroImage,
+    alt: estates[1].heroAlt,
+  },
+  {
+    name: estates[0].name,
+    badge: estates[0].badge,
+    src: estates[0].gallery[0].src,
+    alt: estates[0].gallery[0].alt,
+  },
+  {
+    name: estates[1].name,
+    badge: estates[1].badge,
+    src: estates[1].gallery[0].src,
+    alt: estates[1].gallery[0].alt,
+  },
+];
+
 export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const autoplayTimerRef = useRef<number | null>(null);
+
+  const restartAutoplay = () => {
+    if (autoplayTimerRef.current !== null) {
+      window.clearInterval(autoplayTimerRef.current);
+    }
+
+    autoplayTimerRef.current = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % bannerSlides.length);
+    }, 7000);
+  };
+
+  useEffect(() => {
+    restartAutoplay();
+
+    return () => {
+      if (autoplayTimerRef.current !== null) {
+        window.clearInterval(autoplayTimerRef.current);
+      }
+    };
+  }, []);
+
+  const showPreviousSlide = () => {
+    setActiveSlide((current) => (current - 1 + bannerSlides.length) % bannerSlides.length);
+    restartAutoplay();
+  };
+
+  const showNextSlide = () => {
+    setActiveSlide((current) => (current + 1) % bannerSlides.length);
+    restartAutoplay();
+  };
+
   return (
     <div className="space-y-12">
-      <section className="overflow-hidden rounded-[2rem] border border-amber-200 bg-white shadow-[0_18px_60px_rgba(120,73,12,0.14)]">
-        <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="space-y-6 p-8 sm:p-10 lg:p-12">
-            <p className="inline-flex rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-700">
-              Luxury real estate showcase
-            </p>
-            <div className="space-y-4">
-              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-amber-950 sm:text-5xl">
-                Two signature projects, presented in a refined gold and brown style.
-              </h1>
-              <p className="max-w-2xl text-base leading-7 text-amber-900/75 sm:text-lg">
-                Explore Vista Nam An Khánh and Noble Palace Tây Thăng Long with a
-                simple structure, direct project pages, and a more royal visual
-                language inspired by premium branded residences.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/estates"
-                className="rounded-full bg-gradient-to-r from-amber-700 to-yellow-600 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-amber-700/20 transition-transform hover:-translate-y-0.5"
+      <section className="group relative overflow-hidden rounded-[2rem] border border-amber-200 bg-black shadow-[0_18px_60px_rgba(120,73,12,0.18)]">
+        <div className="relative aspect-[16/9] min-h-[28rem] lg:min-h-[38rem]">
+          {bannerSlides.map((slide, index) => {
+            const isActive = index === activeSlide;
+
+            return (
+              <div
+                key={`${slide.name}-${slide.src}`}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                  isActive ? "opacity-100" : "opacity-0"
+                }`}
+                aria-hidden={!isActive}
               >
-                View projects
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-full border border-amber-300 px-5 py-3 text-sm font-medium text-amber-950 transition-colors hover:bg-amber-50"
-              >
-                Contact
-              </Link>
-            </div>
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0}
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-black/25" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 lg:p-8">
+                  <div className="max-w-xl rounded-2xl bg-black/40 px-4 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+                    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.26em] text-white/75">
+                      {slide.badge}
+                    </p>
+                    <h1 className="mt-1 text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
+                      {slide.name}
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          <div className="absolute right-4 top-4 flex gap-2 sm:right-6 sm:top-6">
+            {bannerSlides.map((slide, index) => (
+              <button
+                key={`${slide.name}-dot-${slide.src}`}
+                type="button"
+                aria-label={`Show slide for ${slide.name}`}
+                onClick={() => {
+                  setActiveSlide(index);
+                  restartAutoplay();
+                }}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  index === activeSlide ? "w-8 bg-white" : "w-2.5 bg-white/45 hover:bg-white/70"
+                }`}
+              />
+            ))}
           </div>
 
-          <div className="grid gap-0 bg-gradient-to-br from-amber-950 via-amber-900 to-yellow-700 p-6 text-amber-50 sm:p-8">
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-              <p className="text-xs uppercase tracking-[0.2em] text-amber-100/80">Project snapshot</p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {estates.map((estate) => (
-                  <div key={estate.slug} className="rounded-2xl border border-white/10 bg-black/10 p-4">
-                    <p className="text-sm font-semibold text-white">{estate.name}</p>
-                    <p className="mt-2 text-sm leading-6 text-amber-50/85">{estate.summary}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <button
+            type="button"
+            onClick={showPreviousSlide}
+            aria-label="Previous photo"
+            className="absolute left-4 top-1/2 z-10 -translate-y-1/2 cursor-pointer rounded-full border border-white/20 bg-black/40 p-3 text-white opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-black/60 group-hover:opacity-100 sm:left-6"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+              <path
+                d="M15 18l-6-6 6-6"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.25"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            onClick={showNextSlide}
+            aria-label="Next photo"
+            className="absolute right-4 top-1/2 z-10 -translate-y-1/2 cursor-pointer rounded-full border border-white/20 bg-black/40 p-3 text-white opacity-0 backdrop-blur-sm transition-all duration-300 hover:bg-black/60 group-hover:opacity-100 sm:right-6"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+              <path
+                d="M9 6l6 6-6 6"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.25"
+              />
+            </svg>
+          </button>
         </div>
       </section>
 
