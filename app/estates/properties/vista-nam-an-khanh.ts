@@ -6,13 +6,12 @@ export const vistaNamAnKhanh: Estate = {
   badge: "Vista Nam An Khánh",
   summary: "Khu đô thị 288,8 ha với 8 phân khu, mật độ xây dựng 42% và định vị cửa ngõ phía Tây Hà Nội.",
   description:
-    "Vista Nam An Khánh là khu đô thị quy mô lớn tại Hoài Đức, nổi bật với không gian hồ cảnh quan, mật độ xây dựng thấp, phong cách Địa Trung Hải trẻ trung và hệ sản phẩm thấp tầng đa dạng.",
+    "Vista Nam An Khánh là khu đô thị quy mô lớn tại Hoài Đức, với 288,8 ha gồm 8 phân khu, mật độ xây dựng 42% và hệ sản phẩm thấp tầng đa dạng.",
   heroImage: "/VistaNamAnKhanh/tongquankdt.jpg",
   heroAlt: "Tổng quan khu đô thị Vista Nam An Khánh",
-  location:
-    "Xã An Khánh, huyện Hoài Đức, TP. Hà Nội, ngay nút giao Đại Lộ Thăng Long và trục Lê Trọng Tấn.",
+  location: "xã An Khánh, huyện Hoài Đức, TP. Hà Nội",
   overview:
-    "Dự án có quy mô 288,8 ha, gồm 8 phân khu, 1.793 căn nhà ở thấp tầng và căn hộ cao cấp, trong đó đợt mở bán 2 tập trung vào Vista Serena và Vista Palma.",
+    "Chủ đầu tư: Công ty cổ phần SJ Group. Quy mô: 288,8 ha gồm 8 phân khu. Mở bán đợt 2 gồm 2 phân khu. Cơ cấu sản phẩm gồm biệt thự đơn lập, biệt thự song lập, nhà liền kề có sân vườn và shophouse cao 3 - 4 tầng. Mật độ xây dựng: 42%.",
   stats: [
     { label: "Quy mô", value: "288,8 ha" },
     { label: "Phân khu", value: "8 khu" },

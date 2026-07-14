@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -86,7 +84,7 @@ export default function Home() {
                   alt={slide.alt}
                   fill
                   priority={index === 0}
-                  className="object-cover"
+                  className="object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-black/25" />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-transparent to-transparent" />
