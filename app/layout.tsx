@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dự Án Nội Đô",
+  title: "Dự Án Nội Đô phía Tây Hà Nội",
   description: "Luxury real estate marketing site for Vista Nam An Khánh and Noble Palace Tây Thăng Long.",
 };
 
