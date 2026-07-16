@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+const basePath = "/DuAnNoiDoHN"; // Adjust this to your repository name if needed
 export default function Home() {
   return (
     <div>
@@ -58,7 +59,7 @@ export default function Home() {
           <div className="mt-16 space-y-8">
             <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 overflow-hidden">
               <Image
-                src="/noblepalaceTayThangLong/1.jpg"
+                src={`${basePath}/noblepalaceTayThangLong/1.jpg`}
                 alt="Noble Palace Tây Thăng Long"
                 width={1200}
                 height={600}
@@ -68,7 +69,7 @@ export default function Home() {
 
             <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 overflow-hidden">
               <Image
-                src="/noblepalaceTayThangLong/2.jpg"
+                src={`${basePath}/noblepalaceTayThangLong/2.jpg`}
                 alt="Noble Palace Tây Thăng Long"
                 width={1200}
                 height={600}
@@ -205,7 +206,7 @@ export default function Home() {
           <div className="mt-16 space-y-8">
             <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 overflow-hidden">
               <Image
-                src="/noblepalaceTayThangLong/3.jpg"
+                src={`${basePath}/noblepalaceTayThangLong/3.jpg`}
                 alt="Noble Palace Tây Thăng Long"
                 width={1200}
                 height={600}
@@ -215,7 +216,7 @@ export default function Home() {
 
             <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 overflow-hidden">
               <Image
-                src="/noblepalaceTayThangLong/4.jpg"
+                src={`${basePath}/noblepalaceTayThangLong/4.jpg`}
                 alt="Noble Palace Tây Thăng Long"
                 width={1200}
                 height={600}
@@ -279,7 +280,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="rounded-xl overflow-hidden shadow-lg border border-yellow-200 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/overall.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/overall.jpg`}
                     alt="Tổng thể shophouse - Hình 1"
                     width={600}
                     height={400}
@@ -288,7 +289,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-yellow-200 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/overall2.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/overall2.jpg`}
                     alt="Tổng thể shophouse - Hình 2"
                     width={600}
                     height={400}
@@ -297,7 +298,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-yellow-200 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/overall3.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/overall3.jpg`}
                     alt="Tổng thể shophouse - Hình 3"
                     width={600}
                     height={400}
@@ -423,7 +424,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                 <Image
-                  src="/noblepalaceTayThangLong/5.jpg"
+                  src={`${basePath}/noblepalaceTayThangLong/5.jpg`}
                   alt="Grand Shophouse - Hình 1"
                   width={1200}
                   height={600}
@@ -432,7 +433,7 @@ export default function Home() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                 <Image
-                  src="/noblepalaceTayThangLong/6.jpg"
+                  src={`${basePath}/noblepalaceTayThangLong/6.jpg`}
                   alt="Grand Shophouse - Hình 2"
                   width={1200}
                   height={600}
@@ -560,7 +561,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                 <Image
-                  src="/noblepalaceTayThangLong/7.jpg"
+                  src={`${basePath}/noblepalaceTayThangLong/7.jpg`}
                   alt="Elegant Shophouse - Hình 1"
                   width={1200}
                   height={600}
@@ -569,7 +570,7 @@ export default function Home() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                 <Image
-                  src="/noblepalaceTayThangLong/8.jpg"
+                  src={`${basePath}/noblepalaceTayThangLong/8.jpg`}
                   alt="Elegant Shophouse - Hình 2"
                   width={1200}
                   height={600}
@@ -808,7 +809,7 @@ export default function Home() {
             {/* Amenities Image */}
             <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300 mb-16">
               <Image
-                src="/noblepalaceTayThangLong/9.png"
+                src={`${basePath}/noblepalaceTayThangLong/9.png`}
                 alt="Tiện ích tại dự án"
                 width={1200}
                 height={600}
@@ -919,7 +920,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/10.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/10.jpg`}
                     alt="Tiện ích - Hình 1"
                     width={1200}
                     height={600}
@@ -928,7 +929,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/11.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/11.jpg`}
                     alt="Tiện ích - Hình 2"
                     width={1200}
                     height={600}
@@ -937,7 +938,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/12.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/12.jpg`}
                     alt="Tiện ích - Hình 3"
                     width={1200}
                     height={600}
@@ -946,7 +947,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/13.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/13.jpg`}
                     alt="Tiện ích - Hình 4"
                     width={1200}
                     height={600}
@@ -955,7 +956,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/14.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/14.jpg`}
                     alt="Tiện ích - Hình 5"
                     width={1200}
                     height={600}
@@ -964,7 +965,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/15.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/15.jpg`}
                     alt="Tiện ích - Hình 6"
                     width={1200}
                     height={600}
@@ -973,7 +974,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/16.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/16.jpg`}
                     alt="Tiện ích - Hình 7"
                     width={1200}
                     height={600}
@@ -982,7 +983,7 @@ export default function Home() {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                   <Image
-                    src="/noblepalaceTayThangLong/17.jpg"
+                    src={`${basePath}/noblepalaceTayThangLong/17.jpg`}
                     alt="Tiện ích - Hình 8"
                     width={1200}
                     height={600}
@@ -1018,7 +1019,7 @@ export default function Home() {
             {/* Overview Image */}
             <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300 mb-16">
               <Image
-                src="/noblepalaceTayThangLong/18.jpg"
+                src={`${basePath}/noblepalaceTayThangLong/18.jpg`}
                 alt="Vị trí kết nối giao thông"
                 width={1200}
                 height={600}
@@ -1106,7 +1107,7 @@ export default function Home() {
               </h2>
               <div className="rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:shadow-2xl transition-shadow duration-300">
                 <Image
-                  src="/noblepalaceTayThangLong/19.jpg"
+                  src={`${basePath}/noblepalaceTayThangLong/19.jpg`}
                   alt="Bản đồ vị trí Noble Palace Tây Thăng Long"
                   width={1200}
                   height={600}

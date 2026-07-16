@@ -11,6 +11,5 @@ const nextConfig: NextConfig = {
   basePath: basePath || undefined,
 };
 
-console.log("Next.js basePath:", nextConfig.basePath);
 
 export default nextConfig;
