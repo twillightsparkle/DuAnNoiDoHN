@@ -11,4 +11,4 @@ const nextConfig: NextConfig = {
   basePath: basePath || undefined,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
