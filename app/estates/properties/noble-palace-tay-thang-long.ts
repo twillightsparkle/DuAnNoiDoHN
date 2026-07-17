@@ -1,5 +1,6 @@
 import type { Estate } from "../types";
 
+const basePath = "/DuAnNoiDoHN"; // Adjust this to your repository name if needed
 export const noblePalaceTayThangLong: Estate = {
   slug: "noble-palace-tay-thang-long",
   name: "Noble Palace Tây Thăng Long",
@@ -7,7 +8,7 @@ export const noblePalaceTayThangLong: Estate = {
   summary: "Đô thị thấp tầng hàng hiệu đầu tiên của Hà Nội, quy mô 77 ha với 2.448 sản phẩm và 4 phân khu tinh hoa.",
   description:
     "Noble Palace Tây Thăng Long là dự án branded residences quy mô 77 ha tại mặt đường Hoàng Quốc Việt kéo dài, định vị là khu đô thị thấp tầng hàng hiệu đầu tiên của Hà Nội với sản phẩm shophouse, biệt thự và dinh thự.",
-  heroImage: "/noblepalaceTayThangLong/overall.jpg",
+  heroImage: `${basePath}/noblepalaceTayThangLong/overall.jpg`,
   heroAlt: "Tổng quan dự án Noble Palace Tây Thăng Long",
   location:
     "Mặt đường nối Hoàng Quốc Việt kéo dài, xã Tân Lập, huyện Đan Phượng, Hà Nội.",
@@ -26,22 +27,22 @@ export const noblePalaceTayThangLong: Estate = {
     "Các phân khu Legacy, Century, Harmony và Victory tạo cấu trúc tổng thể rõ ràng",
   ],
   gallery: [
-    { src: "/noblepalaceTayThangLong/1.jpg", alt: "Hình ảnh dự án Noble Palace Tây Thăng Long" },
-    { src: "/noblepalaceTayThangLong/2.jpg", alt: "Phối cảnh dự án Noble Palace Tây Thăng Long" },
-    { src: "/noblepalaceTayThangLong/3.jpg", alt: "Hình ảnh bổ sung Noble Palace Tây Thăng Long" },
-    { src: "/noblepalaceTayThangLong/4.jpg", alt: "Hình ảnh bổ sung Noble Palace Tây Thăng Long" },
+    { src: `${basePath}/noblepalaceTayThangLong/1.jpg`, alt: "Hình ảnh dự án Noble Palace Tây Thăng Long" },
+    { src: `${basePath}/noblepalaceTayThangLong/2.jpg`, alt: "Phối cảnh dự án Noble Palace Tây Thăng Long" },
+    { src: `${basePath}/noblepalaceTayThangLong/3.jpg`, alt: "Hình ảnh bổ sung Noble Palace Tây Thăng Long" },
+    { src: `${basePath}/noblepalaceTayThangLong/4.jpg`, alt: "Hình ảnh bổ sung Noble Palace Tây Thăng Long" },
   ],
   featureCards: [
     {
       title: "Elegant Shophouse",
       text: "4 tầng, 1.496 căn, diện tích sàn 144,6m² - 371,1m²/căn.",
-      image: "/noblepalaceTayThangLong/7.jpg",
+      image: `${basePath}/noblepalaceTayThangLong/7.jpg`,
       alt: "Elegant Shophouse Noble Palace Tây Thăng Long",
     },
     {
       title: "Grand Shophouse",
       text: "5 tầng, 952 căn, diện tích sàn 211m² - 562m²/căn.",
-      image: "/noblepalaceTayThangLong/5.jpg",
+      image: `${basePath}/noblepalaceTayThangLong/5.jpg`,
       alt: "Grand Shophouse Noble Palace Tây Thăng Long",
     },
   ],

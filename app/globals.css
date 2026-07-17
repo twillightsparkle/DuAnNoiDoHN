@@ -21,7 +21,6 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #f8efe1 0%, #fff8ea 40%, #fffdf8 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   margin: 0;
