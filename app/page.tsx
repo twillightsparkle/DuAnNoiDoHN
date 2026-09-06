@@ -162,19 +162,16 @@ export default function Home() {
       <section className="space-y-4">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-amber-700">
-              Featured estates
-            </p>
             <h2 className="mt-2 text-2xl font-semibold text-amber-950">
-              Noble Palace product lines
+              DỰ ÁN NỔI BẬT
             </h2>
           </div>
           <Link href="/estates" className="text-sm font-medium text-amber-800 hover:text-amber-950">
-            See all
+            Xem toàn bộ
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           {estates.map((estate) => (
             <Link
               key={estate.slug}

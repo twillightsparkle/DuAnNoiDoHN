@@ -14,14 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dự Án Nội Đô phía Tây Hà Nội",
+  title: "Dự Án Nhà Nội Đô Hà Nội",
   description: "Luxury real estate marketing site for Vista Nam An Khánh and Noble Palace Tây Thăng Long.",
 };
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/estates", label: "Projects" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Trang Chủ" },
+  { href: "/estates", label: "Dự Án" },
+  { href: "/contact", label: "Liên Hệ" },
 ];
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
           <header className="sticky top-0 z-20 border-b border-amber-200/60 bg-gradient-to-r from-amber-950 via-amber-900 to-yellow-700 px-4 py-4 shadow-lg shadow-amber-950/10 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <Link href="/" className="text-lg font-semibold uppercase tracking-[0.18em] text-amber-50">
-                Dự án nội đô phía Tây Hà Nội
+                Dự án nhà nội đô Hà Nội
               </Link>
               <div className="flex items-center justify-between gap-6">
                 <nav className="flex items-center gap-5 text-sm text-amber-50/90">

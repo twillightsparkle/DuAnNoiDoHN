@@ -5,35 +5,39 @@ import { estates } from "./data";
 export default function EstatesPage() {
   return (
     <div className="space-y-8">
-      <section className="overflow-hidden rounded-[2rem] border border-amber-200 bg-white shadow-[0_18px_60px_rgba(120,73,12,0.12)]">
-        <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4 p-8 sm:p-10">
-            <p className="inline-flex rounded-full border border-amber-300 bg-amber-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-amber-700">
-              Estate option
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-amber-950 sm:text-4xl">
-              Two luxury projects, one refined presentation
-            </h1>
-            <p className="max-w-2xl text-base leading-7 text-amber-900/75">
-              Browse the Vista Nam An Khánh and Noble Palace Tây Thăng Long
-              project pages below. Each one has its own folder and simple URL so
-              you can update content later without changing the site structure.
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-amber-950 via-amber-900 to-yellow-700 p-8 text-amber-50">
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <p className="text-xs uppercase tracking-[0.2em] text-amber-100/80">Site style</p>
-              <h2 className="mt-3 text-2xl font-semibold">Brown and gold luxury theme</h2>
-              <p className="mt-3 text-sm leading-6 text-amber-50/85">
-                Rich gradients, rounded cards, and strong typography to match a
-                royal branded-residence feel.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative overflow-hidden rounded-[2rem] border border-amber-200/80 bg-white shadow-[0_18px_60px_rgba(120,73,12,0.08)]">
+    <div className="grid gap-6 p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
+      {/* Left: Project Narrative */}
+      <div className="space-y-3">
+        <span className="inline-flex rounded-full border border-amber-300/80 bg-amber-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-amber-800">
+          Tổng Quan
+        </span>
+        <h1 className="text-2xl font-bold tracking-tight text-amber-950 sm:text-3xl lg:text-4xl">
+          Tìm Hiểu Về Dự Án
+        </h1>
+        <p className=" text-sm leading-relaxed text-amber-900/75 sm:text-base">
+          Chúng tôi cung cấp thông tin chi tiết về các dự án bất động sản cao cấp tại Hà Nội, giúp bạn dễ dàng tìm hiểu và lựa chọn không gian sống phù hợp với nhu cầu.
+        </p>
+      </div>
 
-      <section className="grid gap-5 md:grid-cols-2">
+      {/* Right: Focused Metric Card */}
+      <div className="flex shrink-0">
+        <div className="w-full rounded-2xl border border-amber-900/20 bg-gradient-to-br from-amber-950 via-amber-900 to-yellow-900 p-6 text-center text-amber-50 shadow-inner sm:w-56 sm:text-left">
+          <p className="text-xs font-semibold uppercase tracking-wider text-amber-200/80">
+            Dự Án Hiện Có
+          </p>
+          <p className="my-1 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+            {estates.length}
+          </p>
+          <p className="text-xs text-amber-200/70">
+            Đang mở bán & phát triển
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <section className="grid gap-5 md:grid-cols-3">
         {estates.map((estate) => (
           <Link
             key={estate.slug}
