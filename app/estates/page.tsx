@@ -16,7 +16,7 @@ export default function EstatesPage() {
           Tìm Hiểu Về Dự Án
         </h1>
         <p className=" text-sm leading-relaxed text-amber-900/75 sm:text-base">
-          Chúng tôi cung cấp thông tin chi tiết về các dự án bất động sản cao cấp tại Hà Nội, giúp bạn dễ dàng tìm hiểu và lựa chọn không gian sống phù hợp với nhu cầu.
+          Chúng tôi cung cấp thông tin chi tiết về các dự án bất động sản cao cấp tại Hà Nội, giúp bạn dễ dàng tìm hiểu và lựa chọn không gian sống cũng như đầu tư phù hợp với nhu cầu.
         </p>
       </div>
 

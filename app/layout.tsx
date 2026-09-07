@@ -60,7 +60,7 @@ export default function RootLayout({
           </main>
           <footer className="mt-10 bg-gradient-to-r from-amber-950 via-amber-900 to-yellow-800 px-4 py-6 text-amber-50 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-2 text-sm md:flex-row md:items-center md:justify-between">
-              <p>Dự án bất động sản cao cấp tại Thủ Đô</p>
+              <p>Dự án bất động sản cao cấp tại Hà Nội</p>
               <p>Hotline: 0984 704 988</p>
             </div>
           </footer>
