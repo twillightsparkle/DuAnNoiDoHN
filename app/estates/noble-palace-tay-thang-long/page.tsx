@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const basePath = "/DuAnNoiDoHN"; // Adjust this to your repository name if needed
+const basePath = ""; // Adjust this to your repository name if needed
 export default function Home() {
   return (
     <div>
