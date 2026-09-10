@@ -1,6 +1,6 @@
 import type { Estate } from "../types";
 
-const basePath = "/DuAnNoiDoHN"; // Adjust this to your repository name if needed
+const basePath = ""; // Adjust this to your repository name if needed
 
 export const astor1: Estate = {
   slug: "astor-1",

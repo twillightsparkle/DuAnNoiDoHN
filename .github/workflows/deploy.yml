@@ -44,7 +44,7 @@ jobs:
     - name: Build
       run: npm run build
       env:
-        NEXT_PUBLIC_BASE_PATH: /DuAnNoiDoHN
+        NEXT_PUBLIC_BASE_PATH:
 
     - name: Add .nojekyll file
       run: |
