@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: basePath || undefined,
+  basePath: basePath,
 };
 
 
