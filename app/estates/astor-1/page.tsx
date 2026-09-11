@@ -314,9 +314,9 @@ export default function Home() {
               <span className="mr-3 text-yellow-400 flex-shrink-0">📍</span>
               <span><strong>Địa chỉ:</strong> Lô đất IA25, Khu đô thị Nam Thăng Long - Ciputra, phường Phú Thượng, Hà Nội.</span>
             </p>
-            <p className="text-lg flex items-center">
-               <span className="mr-3 text-yellow-400">📞</span>
-               <strong>Hotline:</strong> 0984.704.988
+            <p className="text-lg mb-2 flex items-start">
+              <span className="mr-3 text-yellow-400 flex-shrink-0">📞</span>
+              <span><strong>Hotline:</strong> 0984.704.988</span>
             </p>
           </div>
         </div>
