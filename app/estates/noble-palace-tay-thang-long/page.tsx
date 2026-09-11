@@ -1117,7 +1117,7 @@ export default function Home() {
             </div>
             {/* Call to Action */}
             <div className="mt-16 text-center">
-              <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 p-12">
+              <div className="bg-white rounded-2xl shadow-xl border border-yellow-200 p-4 sm:p-12">
                 <h2 className="text-2xl sm:text-3xl font-bold text-amber-900 mb-6">
                   Khám Phá Tiện Ích Tuyệt Vời
                 </h2>
@@ -1126,9 +1126,9 @@ export default function Home() {
                 </p>
                 <a
                   href="tel:0984704988"
-                  className="inline-block bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 text-white font-bold py-4 px-12 rounded-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+                  className="inline-block w-full max-w-full bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 text-white font-bold py-4 px-3 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
                 >
-                  Liên Hệ Ngay: <span className="inline">0984 704 988</span>
+                  Liên Hệ Ngay: <span className="inline whitespace-nowrap">0984 704 988</span>
                 </a>
               </div>
             </div>

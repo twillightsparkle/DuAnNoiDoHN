@@ -310,9 +310,9 @@ export default function Home() {
         <div className="bg-gradient-to-r from-amber-800 to-amber-900 rounded-3xl p-10 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
             <h3 className="text-3xl font-bold mb-4">Thông tin liên hệ phòng kinh doanh</h3>
-            <p className="text-lg mb-2 flex items-center">
-               <span className="mr-3 text-yellow-400">📍</span>
-               <strong>Địa chỉ:</strong> Lô đất IA25, Khu đô thị Nam Thăng Long - Ciputra, phường Phú Thượng, Hà Nội.
+            <p className="text-lg mb-2 flex items-start">
+              <span className="mr-3 text-yellow-400 flex-shrink-0">📍</span>
+              <span><strong>Địa chỉ:</strong> Lô đất IA25, Khu đô thị Nam Thăng Long - Ciputra, phường Phú Thượng, Hà Nội.</span>
             </p>
             <p className="text-lg flex items-center">
                <span className="mr-3 text-yellow-400">📞</span>
