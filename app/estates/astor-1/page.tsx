@@ -7,6 +7,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 py-16">
         <div className="mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-amber-900 uppercase">Tổng quan Astor 1</h2>
+          <p className="mt-3 text-amber-700 font-medium">#Astor1Ciputra #IA25Ciputra #ChungcuCiputra #Astor1IA25</p>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-amber-500 mt-4 mb-8 rounded-full"></div>
         </div>
         
@@ -233,7 +234,7 @@ export default function Home() {
             </div>
             <div className="bg-amber-50 rounded-xl p-4 border border-amber-100 flex items-start shadow-sm">
               <span className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 text-white flex items-center justify-center font-bold mr-4 flex-shrink-0">2</span>
-              <span className="text-amber-800"><strong>Penthouse / VIP:</strong> 243 m² ~ 35 Tỷ (Tầm nhìn trực diện sân Golf).</span>
+              <span className="text-amber-800"><strong>Penthouse / VIP:</strong> 243 m² ~ 25 Tỷ (Tầm nhìn trực diện sân Golf).</span>
             </div>
           </div>
           
