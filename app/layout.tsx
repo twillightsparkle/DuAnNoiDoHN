@@ -66,7 +66,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
-        <GoogleTagManager gtmId="GTM-XXXXXXX"/>
+        <GoogleTagManager gtmId="AW-18044277511"/>
       </body>
     </html>
   );
