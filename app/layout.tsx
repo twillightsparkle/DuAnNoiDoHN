@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleTagManager } from '@next/third-parties/google';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -66,7 +66,19 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
-        <GoogleTagManager gtmId="AW-18044277511"/>
+        {/* 2. Google Ads gtag.js scripts */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18044277511"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18044277511');
+          `}
+        </Script>
       </body>
     </html>
   );
